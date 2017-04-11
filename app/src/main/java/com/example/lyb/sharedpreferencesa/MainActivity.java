@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button saveData = (Button) findViewById(R.id.save_data);
+        Button restoreData = (Button) findViewById(R.id.restore_data);
         saveData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,5 +28,13 @@ public class MainActivity extends AppCompatActivity {
                 editor.apply();
             }
         });
+        restoreData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = getSharedPreferences("data",MODE_PRIVATE).edit();
+            }
+        });
     }
+
 }
+
