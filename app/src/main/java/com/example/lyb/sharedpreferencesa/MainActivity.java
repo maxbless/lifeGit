@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPreferences.Editor editor = getSharedPreferences("data",MODE_PRIVATE).edit();
                 editor.putString("name","lyb");
-                editor.putInt("age",23);
+                editor.putInt("pwd",23);
                 editor.apply();
             }
         });
@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPreferences pref = getSharedPreferences("data",MODE_PRIVATE);
                 String name = pref.getString("name","");
-                int age = pref.getInt("age",0);
+                int pwd = pref.getInt("pwd",0);
                 Log.d("MainActivity","name is "+name);
-                Log.d("MainActivity","age is "+age);
+                Log.d("MainActivity","pwd is "+pwd);
             }
         });
     }
